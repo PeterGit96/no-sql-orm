@@ -29,7 +29,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User getUsers(@PathVariable String id) {
+    public User getUser(@PathVariable String id) {
         Optional<User> user = userRepository.findById(id);
         if(user.isEmpty()) {
             throw new NotFoundException();
